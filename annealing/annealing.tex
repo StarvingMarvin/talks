@@ -1,0 +1,58 @@
+\documentclass{beamer}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{array}
+\usepackage{amsmath}
+
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+
+\usetheme{Boadilla}
+\usecolortheme{dolphin}
+\usefonttheme{structurebold}
+
+\setbeamertemplate{footline}
+{
+}
+
+
+\title{Optimization by Simulated Annealing}
+\author{Luka Stojanović}
+\institute{
+  luka@magrathea.rs \\
+  Seven Bridges Genomics
+}
+\date{Scalability\#07 \\ 16. 06. 2013.}
+\subject{Computer Science}
+
+\begin{document}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+  \end{frame}
+  
+  \section{Introduction (What? Why?)}
+  \begin{frame}
+    \frametitle{What is SSA Form?}
+    \begin{block}{SSA Form}
+    	Property of compiler's IR, which says that each variable is assigned exactly once.
+    \end{block}
+    
+    \begin{itemize}
+    	\item Developed during 1980's and described in the paper
+    \emph{Efficiently computing static single assignment form and the control dependence graph}
+    by Ron Cytron , Jeanne Ferrante , Barry K. Rosen , Mark N. Wegman , F. Kenneth Zadeck from 1991.
+    	\item Convenient for various optimization techniques.
+    \end{itemize}
+    
+  \end{frame}
+  
+\end{document}
