@@ -8,17 +8,18 @@
 \usepackage{algpseudocode}
 \usepackage{array}
 \usepackage{amsmath}
+\usepackage{pgfpages}
 
 \usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
 
-\usetheme{Boadilla}
-\usecolortheme{dolphin}
+\usetheme{PaloAlto}
+\usecolortheme{seahorse}
 \usefonttheme{structurebold}
 
 \setbeamertemplate{footline}
 {
 }
-
+\setbeameroption{show notes on second screen}
 
 \title{Docker for Fun and Profit}
 \author{Luka Stojanović}
@@ -42,25 +43,74 @@
   \section{What is Docker?}
   \begin{frame}
     \frametitle{What is Docker?}
-    \begin{block}{Title}
-            Text
-    \end{block}
-    \url{http://www.docker.io}
-    \begin{quote}
+    %\begin{block}{Title}
+    %    Text
+    %\end{block}
+    
+    \begin{block}{\url{http://www.docker.io}}
     	Docker is an open-source project to easily create lightweight, 
     	portable, self-sufficient containers from any application
-    \end{quote}
+    \end{block}
+    \note{
+		Now, questions
+  	}
     
+    %\begin{itemize}
+    %    \item Item
+    %\end{itemize}
     
-    \begin{itemize}
-            \item Item
+  \end{frame}
+  
+  \begin{frame}
+  	\frametitle{What does it mean?}
+	\begin{itemize}  	
+  		\item Open source
+  	
+	    \begin{itemize}
+    		\item Code available on Github: \url{https://github.com/dotcloud/docker}
+        	\item Written in Go
+	        \item Actively developed, lots of community contributors
+	    \end{itemize}
+    
+    \item Lightweight, portable, self-sufficient containers
+    	\begin{itemize}
+    		\item No virtual machine, runs on host hardware/kernel
+			\item Isolated from host using kernel features such as control groups,
+				process/network namespacing
+	    \end{itemize}
+    
+    \item ...from any application
+    	\begin{itemize}
+    		\item Point of view that influences design
+	    \end{itemize}
+    \note{
+		Code not of a supreme quality, but improving \\
+		Go is easy to read and understand \\
+		LXC is virtual-machine oriented \\
+  	}
     \end{itemize}
     
   \end{frame}
   
+  
+  
+  \begin{frame}
+    \frametitle{What does it do?}
+    \begin{itemize}
+    	\item System daemon with an HTTP API
+        \item Command line tool
+	    \item Repository with pre-cooked images
+	\end{itemize}
+	\note{Show some cli usage, process on host}
+  \end{frame}  
+  
   \section{What's Inside the Box?}
   \begin{frame}
-    
+    \begin{itemize}
+    	\item Linux containers (lxc)
+        \item Control groups (cgroups)
+        \item Union mount file system (aufs)
+    \end{itemize}
   \end{frame}
   
   \section{Use cases}
